@@ -27,6 +27,9 @@
 - [ ] Playwright/Selenium/Browser 자동화 등 **Computer Use 전 단계 금지**(내장 Browser 직접 점검만 허용)
 - [ ] 외부 자료·코드로 결과물을 통째로 대체하지 않음
 
+- [ ] 시험장에는 **두 문장 시작 문구만 입력**하고 Codex가 `START_PROMPT.md`를 실제로 읽었는지 확인
+- [ ] GitHub 접근/파일 읽기에 실패하면 성공한 척하지 않고 보고받고 기본 Codex로 진행
+
 ## 과제를 받자마자
 
 - [ ] 과제 README와 제공 자료를 실제로 읽음
