@@ -1,10 +1,12 @@
 # Skill 지도 — 겹치지 않게 사용하기
 
+**우선순위: 참가자가 시험 과제 README를 직접 읽고 이해하기 전에는 어떤 Skill도 실행하지 않습니다.** 참가자가 이해·진행 의사를 밝힌 뒤에만 필요한 Skill을 선택합니다.
+
 이 저장소의 **자체 Skill 4개**는 각기 다른 일을 담당합니다. `SKILL.md`를 실제 읽어야 작동 방식을 참고할 수 있고, 시험 Codex의 자동 탐색 기능은 보장되지 않습니다.
 
 | 상황 | 실제로 저장한 Skill | 담당 |
 | --- | --- | --- |
-| 요구를 해석하거나 설계 선택이 필요할 때 | [`brainstorm-requirements`](.agents/skills/brainstorm-requirements/SKILL.md) | **목표·업무 규칙·대안·성공 조건**을 정리 |
+| **참가자가 먼저 읽고 요청한 뒤** 요구를 해석하거나 설계 선택이 필요할 때 | [`brainstorm-requirements`](.agents/skills/brainstorm-requirements/SKILL.md) | **목표·업무 규칙·대안·성공 조건**을 정리 |
 | 오류·테스트 실패가 발생했을 때 | [`find-and-fix-errors`](.agents/skills/find-and-fix-errors/SKILL.md) | 실패 재현 → 원인 확인 → 최소 수정 |
 | CSV·표·집계가 있을 때 | [`check-data-errors`](.agents/skills/check-data-errors/SKILL.md) | 중복·결측·형식·단위·경계값 검증 |
 | 완료를 말하거나 제출물을 확인할 때 | [`check-before-submit`](.agents/skills/check-before-submit/SKILL.md) | 실제 출력·테스트 근거로 PASS/FAIL/미검증 구분 |
