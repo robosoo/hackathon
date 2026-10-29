@@ -13,8 +13,7 @@
 | CSV·데이터 결측·중복·집계 오류 | [.agents/skills/check-data-errors/SKILL.md](.agents/skills/check-data-errors/SKILL.md) |
 | 완료 주장·제출 전 검증 | [.agents/skills/check-before-submit/SKILL.md](.agents/skills/check-before-submit/SKILL.md) |
 | 외부 Skill·Plugin이 정말 필요 | [SKILLS.md](SKILLS.md), [PLUGINS.md](PLUGINS.md) |
-| 참가자가 SW 용어 설명을 요청 | [knowledge/QUICK_REFERENCE.md](knowledge/QUICK_REFERENCE.md) |
 
 **작업 규칙:** 필요한 행의 파일만 열고, 서로 겹치는 Skill을 동시에 사용하지 않는다. 외부 Plugin/MCP/별도 Harness는 기본 **0개**다. 자료 링크를 읽었다고 Skill이 자동 설치된 것은 아니다. **선택한 이유를 한 줄로 보고하고**, 검증한 실행 결과와 미검증 항목을 구분한다. 참가자 승인 전 분석 금지, 자료 외부 반출 금지 등은 `START_PROMPT.md`·`SAFETY.md`를 따른다.
 
-여기 연결된 위키·Skill은 공개 참고 문서이며 시험 문제나 답안을 사전에 담아두지 않는다. 별도의 DB 동기화나 Git Push 절차는 포함하지 않는다.
+여기 연결된 Skill은 공개 작업 지침이며 시험 문제나 답안을 사전에 담아두지 않는다. 별도의 DB 동기화나 Git Push 절차는 포함하지 않는다.
