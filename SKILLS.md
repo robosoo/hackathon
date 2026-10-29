@@ -12,17 +12,17 @@
 | 4 | [validate-data](https://github.com/openai/plugins/blob/main/plugins/data-analytics/skills/validate-data/SKILL.md) | 계산·비율·보고서 검증 | 자료와 계산식 독립 점검 |
 | 5 | [security-best-practices](https://github.com/openai/skills/blob/main/skills/.curated/security-best-practices/SKILL.md) | 입력 검증, 코드 보안, 노출 위험 | 과제 언어·범위를 충족할 때만 |
 | 6 | [pdf](https://github.com/openai/skills/blob/main/skills/.curated/pdf/SKILL.md) | PDF 읽기·편집·보고서 작업 | 과제에 PDF가 있을 때만 |
-| 7 | [frontend-testing-debugging](https://github.com/openai/plugins/blob/main/plugins/build-web-apps/skills/frontend-testing-debugging/SKILL.md) | 웹 앱 화면·버튼·실행 오류 점검 | 브라우저 자동화 등 Computer Use 규정 확인 |
+| 7 | [frontend-testing-debugging](https://github.com/openai/plugins/blob/main/plugins/build-web-apps/skills/frontend-testing-debugging/SKILL.md) | 웹 앱 화면·버튼·실행 오류 점검 | **Browser/Playwright 자동 조작 절차는 시험 금지. 내장 Browser에서 직접 확인** |
 
 첫 선택은 **완료 검증**, 오류가 나면 **디버깅**, 데이터 과제일 때 **데이터 품질**입니다. 나머지는 실제 과제에 필요할 때만.
 
-## 이 저장소에 직접 작성한 경량 Skill 3개
+사용 조건을 더 자세하게 정리한 [**한글 Skill 선택 지도(SKILL_TREE.md)**](SKILL_TREE.md)를 함께 읽으세요.\n\n## 이 저장소에 직접 작성한 경량 Skill 3개
 
 외부 원문을 그대로 복사하지 않고, 누구나 읽을 수 있는 한국어 작업 지침으로 직접 구성한 학습용 파일입니다.
 
-- [verify-results](.agents/skills/verify-results/SKILL.md) — 완료 전 실제 실행 결과 확인
-- [debug-root-cause](.agents/skills/debug-root-cause/SKILL.md) — 오류 재현·원인 추적·재검증
-- [check-data-quality](.agents/skills/check-data-quality/SKILL.md) — 데이터 누락·중복·분모·경계값 검사
+- [제출 전 최종 검증 · check-before-submit](.agents/skills/check-before-submit/SKILL.md) — 완료 전 실제 실행 결과 확인
+- [오류 원인 분석 및 수정 · find-and-fix-errors](.agents/skills/find-and-fix-errors/SKILL.md) — 오류 재현·원인 추적·재검증
+- [데이터 오류·누락·중복 검증 · check-data-errors](.agents/skills/check-data-errors/SKILL.md) — 데이터 누락·중복·분모·경계값 검사
 
 모두 `SKILL.md` 형식을 따르지만, **Cofa Codex가 이 저장소의 Skill을 자동 탐색한다는 보장은 없습니다.** 지원하지 않는 환경이면 [START_PROMPT.md](START_PROMPT.md)를 자연어로 입력해 같은 원칙을 적용하세요.
 

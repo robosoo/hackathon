@@ -9,16 +9,16 @@
 
 https://github.com/robosoo/hackathon
 
-README.md를 확인하고 현재 과제에 필요한 Skill만 추천해 줘.
+README.md와 SKILL_TREE.md를 실제로 읽을 수 있는지 확인하고 현재 과제에 필요한 Skill만 추천해 줘.
 
 1. 먼저 실제 과제 README의 요구사항을 확인해.
-2. 필요한 Skill을 하나만 선택해.
+2. SKILL_TREE.md의 한글 사용 목적을 참고해 필요한 Skill 하나만 선택하고 선택 이유를 한국어로 설명해. 외부 Skill은 링크만으로 설치됐다고 가정하지 마.
 3. 사용 전에 외부 통신과 실행 권한을 확인해.
-4. 과제 결과물을 구현하고 실제로 검증해.
+4. 과제 결과물을 구현하고 실제로 검증해. Browser/Playwright 등 Computer Use 자동 조작은 하지 말고, 제공된 Browser를 내가 직접 확인할 수 있게 안내해.
 5. 완료 조건과 미검증 항목을 보고해.
 
 시험 결과 외부 전송, Git Push,
-Codex 업데이트, 별도 AI 모델 연결은 하지 마.
+Codex 업데이트, 별도 AI 모델 연결, Computer Use 자동 조작은 하지 마.
 ```
 
 **이 지시문은 출발점입니다.** Codex가 공개 링크에 실제 접근하지 못했거나 `README.md`를 읽지 못했다면 성공했다고 가정하지 않습니다. 외부 저장소를 Clone할 수 있는지, 공개 Skill이 어떻게 활성화되는지, 작업 공간에서 무엇이 허용되는지는 실제 Cofa 상세 가이드·도움말을 우선합니다. 이 문구로 Skill/Plugin이 자동 설치되는 것은 아닙니다.
@@ -28,10 +28,10 @@ Codex 업데이트, 별도 AI 모델 연결은 하지 마.
 ```text
 먼저 과제 README를 읽고 요구사항·제출물·예외조건을 짧게 정리해.
 공개 도구함: https://github.com/robosoo/hackathon
-접근 가능하면 README/Skill 목록을 읽고 필요한 것만 1개 추천해.
+접근 가능하면 README/SKILL_TREE.md/Skill 목록을 읽고 필요한 것만 1개 추천해. 한글 목적·선택 이유를 알려줘.
 접근 불가하면 그대로 보고하고 기본 Codex로 진행해.
 구현 뒤 직접 실행·검증하고 실패·미검증 항목을 구분해.
-시험 자료 외부 전송, Git Push, Codex 업데이트, 별도 AI 연결은 하지 마.
+시험 자료 외부 전송, Git Push, Codex 업데이트, 별도 AI 연결, Computer Use 자동 조작은 하지 마.
 대답은 핵심만 5~8줄로 요약해.
 ```
 

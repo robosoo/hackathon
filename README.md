@@ -7,7 +7,7 @@
 ## 처음 시작하는 사람을 위한 3단계
 
 1. [START_PROMPT.md](START_PROMPT.md)의 **시작 프롬프트**를 읽습니다. Codex에 입력하는 자연어 지시문입니다.
-2. [SKILLS.md](SKILLS.md)에서 필요한 기술 하나를 찾습니다. `Plugin`과 `Skill`의 차이는 [PLUGINS.md](PLUGINS.md)에 있습니다.
+2. [SKILL_TREE.md](SKILL_TREE.md)에서 한글 목적·사용 조건을 확인하고 [SKILLS.md](SKILLS.md)에서 필요한 Skill 하나를 찾습니다. `Plugin`과 `Skill`의 차이는 [PLUGINS.md](PLUGINS.md)에 있습니다.
 3. [WORKFLOW.md](WORKFLOW.md)를 따라 문제를 해결하고 [CHECKLIST.md](CHECKLIST.md)로 결과를 검증합니다.
 
 ## 파일 안내
@@ -15,7 +15,7 @@
 | 파일 | 무슨 역할? |
 | --- | --- |
 | [START_PROMPT.md](START_PROMPT.md) | 사용자 요청을 반영한 **복사해서 쓰는 Codex 시작 프롬프트** |
-| [SKILLS.md](SKILLS.md) | 검증·디버깅·데이터 품질 등 추천 공개 Skill 7개의 원본 링크와 선택 기준 |
+| [SKILL_TREE.md](SKILL_TREE.md) | **한글 Skill 선택 지도**: 자체 3개·외부 7개·Plugin 4개의 목적·사용 조건·규칙상 주의사항 |\n| [SKILLS.md](SKILLS.md) | 추천 공개 Skill 7개의 원본 링크와 자체 Skill 3개의 선택 기준 |
 | [PLUGINS.md](PLUGINS.md) | 추천 공개 Plugin 4개와 설치·사용의 한계 |
 | [WORKFLOW.md](WORKFLOW.md) | Plan → Prompt → Probe → Protect 실전 작업 절차 |
 | [CHECKLIST.md](CHECKLIST.md) | 규정·예외조건·테스트·제출 전 확인표 |
@@ -30,7 +30,7 @@
 https://github.com/robosoo/hackathon
 ```
 
-**중요:** 주소를 알려주는 행위만으로 Plugin이 설치되거나 Skill이 자동 인식되지는 않습니다. Codex가 실제로 파일을 읽었는지 확인해야 합니다. 저장소를 Clone하거나 등록할 수 있는지도 Cofa 환경과 상세 규정을 우선 확인해야 합니다. 이 저장소 안의 `.agents/skills/`는 일반적인 repo-local Skill 구조를 따르지만, **Cofa에서 자동 탐색/호출된다는 보장은 없습니다.**
+**중요:** 주소를 알려주는 행위만으로 Plugin이 설치되거나 Skill이 자동 인식되지는 않습니다. Codex가 실제로 파일을 읽었는지 확인해야 합니다. 저장소를 Clone하거나 등록할 수 있는지도 Cofa 환경과 상세 규정을 우선 확인해야 합니다. 이 저장소 안의 `.agents/skills/`는 일반적인 repo-local Skill 구조를 따르며 각 `agents/openai.yaml`의 한글 표시도 Cofa 지원이 검증되지 않았습니다. 따라서, **Cofa에서 자동 탐색/호출된다는 보장은 없습니다.**
 
 ## 2026-10-29 Cofa 공식 메일에 따른 주의
 

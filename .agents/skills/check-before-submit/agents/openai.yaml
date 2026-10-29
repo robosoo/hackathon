@@ -1,0 +1,4 @@
+interface:
+  display_name: "제출 전 최종 검증"
+  short_description: "요구사항·실행·테스트·미검증 항목 점검"
+  default_prompt: "현재 과제에 이 Skill이 필요하다면 해당 지침으로 작업하고, 실제 증거와 미검증 사항을 간결하게 보고해."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "데이터 오류·누락·중복 검증"
+  short_description: "결측·중복·단위·분모·경계값 확인"
+  default_prompt: "현재 과제에 이 Skill이 필요하다면 해당 지침으로 작업하고, 실제 증거와 미검증 사항을 간결하게 보고해."

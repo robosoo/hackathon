@@ -5,7 +5,7 @@ This public repository is a **study toolkit**, not a project containing the real
 ## Read first
 - `README.md`: scope and security.
 - `START_PROMPT.md`: requested Codex starter prompt.
-- `SKILLS.md` and `PLUGINS.md`: link catalog, not installed capabilities.
+- `SKILL_TREE.md`: Korean purpose-first selection map, relevant/irrelevant conditions and Cofa prohibited actions.\n- `SKILLS.md` and `PLUGINS.md`: link catalog, not installed capabilities.
 - `WORKFLOW.md` and `CHECKLIST.md`: optional practical guidance.
 
 ## Work safely
@@ -18,10 +18,10 @@ This public repository is a **study toolkit**, not a project containing the real
 7. If an action might conflict with the latest Cofa rules, stop that action and explain the restriction. The later official email overrides older conflicting guides.
 8. Keep output compact for narrow terminal displays; provide file paths and evidence rather than long repetitive chat text.
 
-## Local original skills
-- `.agents/skills/verify-results/SKILL.md`
-- `.agents/skills/debug-root-cause/SKILL.md`
-- `.agents/skills/check-data-quality/SKILL.md`
+## Local original skills (Korean labels in `agents/openai.yaml`)
+- `.agents/skills/check-before-submit/SKILL.md`
+- `.agents/skills/find-and-fix-errors/SKILL.md`
+- `.agents/skills/check-data-errors/SKILL.md`
 
 These are lightweight original study instructions, not copied third-party Plugin code. Repo-local skills or `AGENTS.md` are **not automatically available merely because a URL was pasted**; discovery depends on the allowed runtime, clone/workspace location and tool support. Do not claim Cofa compatibility without testing.
 
