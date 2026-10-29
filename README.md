@@ -21,7 +21,6 @@
 | [SKILLS.md](SKILLS.md) / [PLUGINS.md](PLUGINS.md) | 외부 도구가 정말 필요할 때만 |
 | [TASK_TOOL_MATRIX.md](TASK_TOOL_MATRIX.md) | 작업 유형별 도구 판단이 필요할 때만 |
 | [.agents/skills](.agents/skills) | 자체 Skill 4개: 요구사항, 디버깅, 데이터 검증, 제출 전 점검 |
-| [knowledge/QUICK_REFERENCE.md](knowledge/QUICK_REFERENCE.md) | SW 비전공자용 용어·검증 기초. **사용자가 요청할 때만** |
 
 기본적으로 **START_PROMPT → AGENTS + SAFETY까지만 읽고**, 다른 파일은 실제 작업에 해당할 때만 읽습니다. 여러 문서를 한 번에 주입하거나, 공개 Skill·Plugin을 무조건 설치하지 않습니다. 외부 Plugin/MCP/별도 Harness는 **기본 0개**입니다.
 
