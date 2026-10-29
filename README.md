@@ -1,32 +1,32 @@
 # AI 과제 해결용 공개 도구함
 
-실제 시험 과제에서 참가자가 **먼저 문제를 이해하고 해결 방향을 결정**한 뒤, Codex가 필요한 작업을 구현·검증하도록 돕는 공개 학습용 도구함입니다. 공식 시험 지침이나 완성 답안은 아닙니다.
+참가자가 **먼저 실제 과제를 이해하고 해결 방향을 정한 다음**, Codex가 필요한 Skill만 선택해 구현·검증하도록 돕는 비공식 공개 학습 자료입니다.
 
-## 사용 방법
+## 사용
 
-시험 환경의 Codex에게 **이 공개 저장소에 있는 `START_PROMPT.md`를 읽으라고 지시**하면 됩니다. 이미 이 저장소를 열도록 요청했는데 파일 안에서 다시 저장소 URL을 안내하거나 같은 시작 지시를 반복하지 않습니다.
+시험장 Codex에 **이 저장소의 [START_PROMPT.md](START_PROMPT.md)를 읽으라고 지시**합니다. 실제 시험 과제 README와 이 저장소의 README는 서로 다릅니다.
 
-**Codex가 수행할 순서**
+1. Codex가 **실제 과제 README와 제공 자료를 직접 읽음**.
+2. 참가자가 직접 문제를 파악하고 해결 방향을 정할 동안 Codex는 **문제 풀이를 시작하지 않고 대기**.
+3. 참가자가 진행을 요청하면 Codex가 **필요한 Skill만 선택**해 구현·테스트하고, 선택 이유와 확인된 증거를 보고.
+4. 중요한 판단·수동 화면 확인·최종 제출은 참가자가 직접 수행.
 
-1. 시험 작업공간의 **실제 과제 README와 제공 자료를 직접 읽기**. 학습용 저장소의 README와 혼동하지 않기.
-2. **참가자가 직접 문제를 해석하고 목적·조건·예외·해결 방향을 판단할 동안 대기**. Codex는 열람 성공 여부만 간단히 알림.
-3. 참가자가 진행을 지시한 뒤에만 필요한 브레인스토밍·설계·구현·실행·검증 수행.
-4. 실제 실행 결과와 미검증 사항을 구분하고, 참가자가 결과를 직접 확인하도록 안내.
+## 적은 컨텍스트로 사용하기
 
-**공개 저장소 접근 및 문서 열람에 실패한 경우** 읽었다고 주장하지 말고 사실을 알립니다. Codex 지침만으로 도구가 자동 설치되거나 시험 규정 위반이 기술적으로 차단되는 것은 아닙니다.
-
-## 필요한 파일
-
-| 파일 | 역할 |
+| 문서 | 역할 |
 | --- | --- |
-| [START_PROMPT.md](START_PROMPT.md) | Codex가 실제로 읽고 따를 작업 지침 **본문**. 별도의 첫 입력 문구/자기 URL 없음 |
-| [SAFETY.md](SAFETY.md) | 외부 전송·자동 조작·금지 도구 방지 |
-| [SKILLS.md](SKILLS.md) | 중복 없는 자체 Skill 4개 및 공개 Skill 원본 참고 |
-| [TASK_TOOL_MATRIX.md](TASK_TOOL_MATRIX.md) | 실제 요구가 확인된 뒤 필요한 도구만 고르는 기준 |
-| [PLUGINS.md](PLUGINS.md) | Plugin 후보 및 불필요한 설치 제외 |
-| [AGENTS.md](AGENTS.md) | AI 작업 시 동일한 기본 원칙 |
-| [.agents/skills](.agents/skills) | 직접 작성된 Skill 4개 |
+| [START_PROMPT.md](START_PROMPT.md) | **짧은 시작 지침** |
+| [AGENTS.md](AGENTS.md) | **작업별 참고자료 안내판** |
+| [SAFETY.md](SAFETY.md) | 공통 시험 안전 제한 |
+| [SKILLS.md](SKILLS.md) / [PLUGINS.md](PLUGINS.md) | 외부 도구가 정말 필요할 때만 |
+| [TASK_TOOL_MATRIX.md](TASK_TOOL_MATRIX.md) | 작업 유형별 도구 판단이 필요할 때만 |
+| [.agents/skills](.agents/skills) | 자체 Skill 4개: 요구사항, 디버깅, 데이터 검증, 제출 전 점검 |
+| [knowledge/QUICK_REFERENCE.md](knowledge/QUICK_REFERENCE.md) | SW 비전공자용 용어·검증 기초. **사용자가 요청할 때만** |
 
-**Superpowers의 `brainstorming` 방식**(질문·대안 비교·완료 기준)을 참고한 자체 [경량 브레인스토밍 Skill](.agents/skills/brainstorm-requirements/SKILL.md)은 **참가자가 문제를 이해하고 아이디어 검토를 요청한 뒤에만** 사용합니다. 원본 Superpowers Plugin을 설치한 것으로 표시하지 않습니다.
+기본적으로 **START_PROMPT → AGENTS + SAFETY까지만 읽고**, 다른 파일은 실제 작업에 해당할 때만 읽습니다. 여러 문서를 한 번에 주입하거나, 공개 Skill·Plugin을 무조건 설치하지 않습니다. 외부 Plugin/MCP/별도 Harness는 **기본 0개**입니다.
 
-외부 Plugin/MCP/별도 Harness는 **기본 0개**이며, 필요성·규정 적합·실행 가능·직접 검증 가능할 때에만 검토합니다. 최신 공식 규정과 실제 과제 README가 항상 우선합니다.
+기존 자체 브레인스토밍 Skill은 [Superpowers `brainstorming` 원본](https://github.com/openai/plugins/blob/main/plugins/superpowers/skills/brainstorming/SKILL.md)에서 문제 정의의 기본 접근을 참고한 **별도 경량 지침**이며, 원본 전체 도구가 설치된 것은 아닙니다.
+
+`.gitignore`는 파일을 새로 추적하지 않게 하는 Git 설정일 뿐 AI의 파일 읽기를 막지 않습니다. **공개 시험용 도구함에서는 `AGENTS.md`를 계속 공개·관리**합니다. 시험 자료·응시 결과는 이 저장소에 올리지 않습니다.
+
+**실제 시험 README와 최신 공식 규정이 이 도구함보다 우선**이며, 문서나 Skill 사용 자체의 가점·감점은 보장되지 않습니다.
