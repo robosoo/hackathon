@@ -2,7 +2,7 @@
 
 **이 저장소는 시험 전에 준비하는 공개 학습용 자료 모음입니다.** 2026년 SK하이닉스 AI 해커톤 2차 예선의 공식 시스템·문제·답안이 아닙니다.
 
-> 핵심 원칙: 실제 과제 README를 먼저 읽기 → 필요한 Skill만 고르기 → 구현 → 실행 결과 확인 → 미검증 항목 보고.
+> 핵심 원칙: **최신 Cofa 규정 준수** → 실제 과제 README 확인 → 필요한 Skill만 선택 → 구현 → 실제 검증 → 미검증 항목 보고.
 
 ## 처음 시작하는 사람을 위한 3단계
 
@@ -14,7 +14,7 @@
 
 | 파일 | 무슨 역할? |
 | --- | --- |
-| [START_PROMPT.md](START_PROMPT.md) | 사용자 요청을 반영한 **복사해서 쓰는 Codex 시작 프롬프트** |
+| [START_PROMPT.md](START_PROMPT.md) | **최신 시험 금지사항을 포함한** Codex 시작 프롬프트 |\n| [EXAM_GUARDRAILS.md](EXAM_GUARDRAILS.md) | **외부 전송·Computer Use·외부 AI·보안 우회 금지** 및 매 실행 전 안전 점검 규칙 |
 | [SKILL_TREE.md](SKILL_TREE.md) | **한글 Skill 선택 지도**: 자체 3개·외부 7개·Plugin 4개의 목적·사용 조건·규칙상 주의사항 |\n| [SKILLS.md](SKILLS.md) | 추천 공개 Skill 7개의 원본 링크와 자체 Skill 3개의 선택 기준 |
 | [PLUGINS.md](PLUGINS.md) | 추천 공개 Plugin 4개와 설치·사용의 한계 |
 | [WORKFLOW.md](WORKFLOW.md) | Plan → Prompt → Probe → Protect 실전 작업 절차 |
