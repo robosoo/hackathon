@@ -1,0 +1,4 @@
+interface:
+  display_name: "요구사항 브레인스토밍"
+  short_description: "목표·업무 규칙·핵심 질문·완료 기준 정의"
+  default_prompt: "실제 과제 README를 근거로 중요한 모호함만 질문하고, 최소한의 검증 가능한 구현 방향을 선택해."
