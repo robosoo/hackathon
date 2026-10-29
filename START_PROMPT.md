@@ -32,9 +32,13 @@
 - 실제 과제 README와 파일을 먼저 읽고 요구사항/예외/금지사항/제출물을 정리해.
 - 공개 학습용 도구함: https://github.com/robosoo/hackathon
   제공된 Codex와 시험 규정이 허용하는 방식으로 접근 가능할 때만
-  EXAM_GUARDRAILS.md, SKILL_TREE.md, SKILLS.md와 필요한 SKILL.md를 읽어.
+  EXAM_GUARDRAILS.md, TASK_TOOL_MATRIX.md, PUBLIC_SKILLS_CATALOG.md,
+  MCP_GUIDE.md, SKILL_TREE.md를 실제로 읽고 필요한 SKILL.md만 선택해.
   접근 불가하면 숨기지 말고 내게 알려줘. URL만으로 자동 설치됐다고 말하지 마.
-- 과제에 필요한 Skill만 선택해. 필수 아니면 Plugin/MCP를 추가하지 마.
+- 도구 선정 시 TASK_TOOL_MATRIX.md의 다섯 관문(규정·필수성·동작 이해·재현 검증·자기 설명)을 적용해.
+  **Plugin/MCP/외부 Harness는 기본 0개.** 기본 Codex로 가능하면 추가 설치하지 마.
+  내가 결과를 직접 재현·검증·설명할 수 없는 도구는 사용하지 마.
+  Superpowers 전체 자동 워크플로를 무조건 호출하지 말고, 필요 시 개별 Skill의 허용된 지침만 참고해.
   공개 소스는 허용된 Git Clone/다운로드로 가져올 수 있어도 외부 반출은 금지야.
 - 허용된 로컬 파일 작성·코드 실행·단위 테스트·내장 터미널·개발 서버는 사용해.
 - 매 명령·도구 실행 직전 외부 전송/금지 도구/권한 우회 여부를 자체 점검해.
@@ -56,10 +60,12 @@
 ```text
 먼저 최신 Cofa 규정과 과제 README를 확인해.
 공개 도구함 https://github.com/robosoo/hackathon 접근이 허용되면
-EXAM_GUARDRAILS.md와 SKILL_TREE.md를 읽고 필요한 Skill만 선택해.
+EXAM_GUARDRAILS.md, TASK_TOOL_MATRIX.md, PUBLIC_SKILLS_CATALOG.md,
+MCP_GUIDE.md를 읽고 필요한 Skill만 선택해.
 시험 자료·코드·로그 외부 전송/Git Push, 비공개 자료 반입, 외부 AI·개인 키,
 Codex 업데이트, Computer Use 자동 조작(Playwright 포함), 감독·제한 우회,
 완성 답안 통째 대체, 후속 서술형 AI 작성은 절대 하지 마.
+Plugin/MCP/외부 Harness 기본 0개. 내가 직접 검증·설명 못하면 추가하지 마.
 매 실행 전 금지 여부 확인, 불명확하면 멈추고 질문해.
 실제 구현·테스트만 PASS/FAIL/미검증으로 보고하고 과제에 집중해.
 ```
@@ -69,7 +75,7 @@ Codex 업데이트, Computer Use 자동 조작(Playwright 포함), 감독·제�
 **새로운 Plugin/Skill을 사용하려고 할 때:**
 
 ```text
-지금 추가하려는 도구의 작동 방식과 필요한 권한을 확인해.
+TASK_TOOL_MATRIX.md의 다섯 관문으로 지금 추가하려는 도구의 작동 방식, 권한, 위험, 내가 재현·검증하는 방법을 확인해.
 외부 전송·외부 AI·Computer Use·감독 우회가 있으면 실행하지 마.
 문제 해결에 꼭 필요한지도 검토해서, 더 간단한 허용 방법이 있으면 그걸 써.
 ```

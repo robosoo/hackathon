@@ -1,6 +1,6 @@
 # SK하이닉스 2차 예선용 Skill 사용 지도 · 한국어 설명
 
-이 문서는 **Skill 사용 설명서**입니다. 시험 안전 경계와 실행 전 판단 기준은 [EXAM_GUARDRAILS.md](EXAM_GUARDRAILS.md)를 반드시 함께 확인하세요. 과제의 README, 최신 Cofa 안내 메일, 실제 응시 화면 규정이 먼저입니다. 링크가 있다고 설치되거나 자동 실행되는 것은 아닙니다.
+이 문서는 **Skill 사용 설명서**입니다. [예상 과제별 도구 선택표](TASK_TOOL_MATRIX.md)의 **기본 Plugin/MCP 0개·5관문**과 [Superpowers·OpenAI 전체 주요 Skill 안내](PUBLIC_SKILLS_CATALOG.md)를 먼저 참고하세요. 시험 안전 경계와 실행 전 판단 기준은 [EXAM_GUARDRAILS.md](EXAM_GUARDRAILS.md)를 반드시 함께 확인하세요. 과제의 README, 최신 Cofa 안내 메일, 실제 응시 화면 규정이 먼저입니다. 링크가 있다고 설치되거나 자동 실행되는 것은 아닙니다.
 
 ## 빠른 선택법 — 언제 어떤 Skill인가?
 
@@ -43,7 +43,7 @@
 - [Build Web Apps](https://github.com/openai/plugins/tree/main/plugins/build-web-apps): 웹앱 구현 필요 시. **Browser/Computer Use 자동 조작 단계 실행하지 않음.**
 - [Build Web Data Visualization](https://github.com/openai/plugins/tree/main/plugins/build-web-data-visualization): 과제에 차트·대시보드가 필요할 때. 외부 API/자동 브라우저 조작 제한 확인.
 
-Plugin은 여러 Skill/도구를 묶은 패키지일 수 있으며, **목록에 있는 것과 실제 Cofa에 설치되어 있는 것은 다릅니다.** 실행에 별도 AI 모델·API 키·외부 업로드·감독 우회가 필요하면 사용하지 않습니다.
+**도구는 참가자가 실제 동작을 이해·재현·설명할 수 있을 때만 도입합니다.** Plugin은 여러 Skill/도구를 묶은 패키지일 수 있으며, **목록에 있는 것과 실제 Cofa에 설치되어 있는 것은 다릅니다.** 실행에 별도 AI 모델·API 키·외부 업로드·감독 우회가 필요하면 사용하지 않습니다.
 
 ## 시험 규칙: 선택보다 먼저 적용
 
@@ -60,7 +60,7 @@ Plugin은 여러 Skill/도구를 묶은 패키지일 수 있으며, **목록에 
 ```text
 먼저 실제 과제 README와 제공 자료를 읽어 요구사항·예외조건·제출물·검증 기준을 정리해.
 공개 도구함: https://github.com/robosoo/hackathon
-허용된 플랫폼 내부 방법으로 접근 가능하면 SKILL_TREE.md와 SKILLS.md를 읽고
+허용된 플랫폼 내부 방법으로 접근 가능하면 TASK_TOOL_MATRIX.md, PUBLIC_SKILLS_CATALOG.md, SKILL_TREE.md와 SKILLS.md를 읽고
 사용 가능한 Skill과 '참고 링크만 있는 Skill'을 구분해.
 실질적으로 필요한 Skill 하나만 골라 한글 이름·선택 이유를 짧게 설명해.
 관련 Skill을 실제로 읽거나 사용할 수 없으면 솔직히 보고하고 기본 Codex로 수행해.

@@ -1,13 +1,15 @@
-# 추천 Plugin 4개 — 설치 전 읽기
+# 공개 Plugin 후보 4개 — 기본 설치 0개
+
+**과제별 적용은 [TASK_TOOL_MATRIX.md](TASK_TOOL_MATRIX.md)·[공개 Skill 목록](PUBLIC_SKILLS_CATALOG.md)·[MCP 설명](MCP_GUIDE.md)부터 확인하세요. 기본 Codex로 가능하거나 자신이 결과를 검증·설명하지 못하면 Plugin을 설치하지 않습니다.**
 
 Plugin은 여러 Skill, 지침 및 경우에 따라 도구 연결(MCP)을 묶는 패키지입니다. **Plugin 링크 목록은 설치 목록이 아닙니다.** Cofa의 제공 Codex가 어떤 Plugin을 실제 지원하는지는 현장에서 확인해야 합니다.
 
 | 우선 | 공개 Plugin | 잘 맞는 과제 | 주의 |
 | --- | --- | --- | --- |
-| 1 | [Data Analytics](https://github.com/openai/plugins/tree/main/plugins/data-analytics) | 데이터 정제·검증·분석·보고서 | 외부 데이터 연결/파일 전송이 필요한 기능은 제한 확인 |
-| 2 | [Superpowers](https://github.com/openai/plugins/tree/main/plugins/superpowers) | 계획·디버깅·테스트·완료 검증 | 전체 Harness 설치가 과제를 늦출 수 있음. 핵심 Skill만 사용 고려 |
-| 3 | [Build Web Apps](https://github.com/openai/plugins/tree/main/plugins/build-web-apps) | 웹 UI 구현·테스트 | 브라우저 자동 조작/외부 API·배포 기능은 제한 확인 |
-| 4 | [Build Web Data Visualization](https://github.com/openai/plugins/tree/main/plugins/build-web-data-visualization) | 대시보드·시각화 | 과제에서 시각화를 요구하지 않으면 생략 |
+| 1 | [Data Analytics](https://github.com/openai/plugins/tree/main/plugins/data-analytics) | 데이터 정제·검증·분석·보고서 | 외부 데이터 연결/업로드 금지. 자체 데이터 품질 Skill 우선 |
+| 2 | [Superpowers](https://github.com/openai/plugins/tree/main/plugins/superpowers) | 계획·디버깅·테스트·완료 검증 | **전체 설치 기본 비추천**: 강제 단계·Git 워크플로 등. 개별 Skill 원문 참고 |
+| 3 | [Build Web Apps](https://github.com/openai/plugins/tree/main/plugins/build-web-apps) | 웹 UI 구현·테스트 | **Browser/Playwright 자동 조작 금지**. 자동 UI 검증을 제외할 수 없으면 사용하지 않음 |
+| 4 | [Build Web Data Visualization](https://github.com/openai/plugins/tree/main/plugins/build-web-data-visualization) | 대시보드·시각화 | 시각화가 필수일 때만; 로컬 검산·직접 확인 가능해야 함 |
 
 ## 이해를 위한 개념
 
@@ -23,7 +25,7 @@ Plugin은 여러 Skill, 지침 및 경우에 따라 도구 연결(MCP)을 묶는
 
 이 설명은 **일반 Codex 기준**입니다. 2차 시험용 Codex에 `/plugins`가 없거나 설치 권한·외부 연결이 제한되면 사용하지 말고 기본 Codex로 과제를 해결하세요. 특히 **Codex 버전 업데이트 금지**입니다.
 
-플러그인을 여러 개 설치하는 것보다, README 필수 기능 하나를 완성하고 실제 동작을 확인하는 편이 우선입니다.
+**설치하지 않는 선택이 정상입니다.** 플러그인을 여러 개 설치하는 것보다 README 필수 기능 하나를 완성하고 직접 검증하는 편이 우선입니다. 공식 문서에서 Plugin 개수별 감점·가산점은 확인되지 않았으므로 이를 사실로 단정하지 않습니다.
 
 ## 안전 조건
 

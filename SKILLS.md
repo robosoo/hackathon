@@ -16,7 +16,11 @@
 
 첫 선택은 **완료 검증**, 오류가 나면 **디버깅**, 데이터 과제일 때 **데이터 품질**입니다. 나머지는 실제 과제에 필요할 때만.
 
-사용 조건을 더 자세하게 정리한 [**한글 Skill 선택 지도(SKILL_TREE.md)**](SKILL_TREE.md)를 함께 읽으세요.\n\n## 이 저장소에 직접 작성한 경량 Skill 3개
+전체 Superpowers·OpenAI Skill 후보와 제외 이유는 [PUBLIC_SKILLS_CATALOG.md](PUBLIC_SKILLS_CATALOG.md)에 있습니다. 과제별 선택은 [TASK_TOOL_MATRIX.md](TASK_TOOL_MATRIX.md)에서 확인하세요.
+
+사용 조건을 더 자세하게 정리한 [**한글 Skill 선택 지도(SKILL_TREE.md)**](SKILL_TREE.md)를 함께 읽으세요.
+
+## 이 저장소에 직접 작성한 경량 Skill 3개
 
 외부 원문을 그대로 복사하지 않고, 누구나 읽을 수 있는 한국어 작업 지침으로 직접 구성한 학습용 파일입니다.
 

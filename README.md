@@ -2,20 +2,25 @@
 
 **이 저장소는 시험 전에 준비하는 공개 학습용 자료 모음입니다.** 2026년 SK하이닉스 AI 해커톤 2차 예선의 공식 시스템·문제·답안이 아닙니다.
 
-> 핵심 원칙: **최신 Cofa 규정 준수** → 실제 과제 README 확인 → 필요한 Skill만 선택 → 구현 → 실제 검증 → 미검증 항목 보고.
+> 핵심 원칙: **최신 Cofa 규정 준수** → 실제 과제 README → 도구 기본 0개 → 필요한 지침만 선택 → 구현 → **내가 직접 검증하고 설명** → 미검증 항목 보고.
 
 ## 처음 시작하는 사람을 위한 3단계
 
 1. [START_PROMPT.md](START_PROMPT.md)의 **시작 프롬프트**를 읽습니다. Codex에 입력하는 자연어 지시문입니다.
-2. [SKILL_TREE.md](SKILL_TREE.md)에서 한글 목적·사용 조건을 확인하고 [SKILLS.md](SKILLS.md)에서 필요한 Skill 하나를 찾습니다. `Plugin`과 `Skill`의 차이는 [PLUGINS.md](PLUGINS.md)에 있습니다.
+2. [TASK_TOOL_MATRIX.md](TASK_TOOL_MATRIX.md)에서 **과제별 최소 도구·직접 검증 방법**을 확인하고, [SKILL_TREE.md](SKILL_TREE.md)에서 필요한 Skill만 고릅니다. MCP는 [MCP_GUIDE.md](MCP_GUIDE.md)에서 확인합니다. `Plugin`과 `Skill`의 차이는 [PLUGINS.md](PLUGINS.md)에 있습니다.
 3. [WORKFLOW.md](WORKFLOW.md)를 따라 문제를 해결하고 [CHECKLIST.md](CHECKLIST.md)로 결과를 검증합니다.
 
 ## 파일 안내
 
 | 파일 | 무슨 역할? |
 | --- | --- |
-| [START_PROMPT.md](START_PROMPT.md) | **최신 시험 금지사항을 포함한** Codex 시작 프롬프트 |\n| [EXAM_GUARDRAILS.md](EXAM_GUARDRAILS.md) | **외부 전송·Computer Use·외부 AI·보안 우회 금지** 및 매 실행 전 안전 점검 규칙 |
-| [SKILL_TREE.md](SKILL_TREE.md) | **한글 Skill 선택 지도**: 자체 3개·외부 7개·Plugin 4개의 목적·사용 조건·규칙상 주의사항 |\n| [SKILLS.md](SKILLS.md) | 추천 공개 Skill 7개의 원본 링크와 자체 Skill 3개의 선택 기준 |
+| [START_PROMPT.md](START_PROMPT.md) | **최신 시험 금지사항을 포함한** Codex 시작 프롬프트 |
+| [EXAM_GUARDRAILS.md](EXAM_GUARDRAILS.md) | **외부 전송·Computer Use·외부 AI·보안 우회 금지** 및 매 실행 전 안전 점검 규칙 |
+| [TASK_TOOL_MATRIX.md](TASK_TOOL_MATRIX.md) | **비공식 예상 과제별 도구 선택표: Plugin/MCP 기본 0개, 검증·자기 설명 5관문** |
+| [PUBLIC_SKILLS_CATALOG.md](PUBLIC_SKILLS_CATALOG.md) | **Superpowers 14개 + OpenAI curated 주요 Skill 한글 용도·시험 주의** |
+| [MCP_GUIDE.md](MCP_GUIDE.md) | **Cofa MCP 탭 확인 내용·기본 0개·실제 필요시 확인 절차** |
+| [SKILL_TREE.md](SKILL_TREE.md) | **한글 Skill 선택 지도**: 자체 3개·외부 7개·Plugin 4개의 목적·사용 조건·규칙상 주의사항 |
+| [SKILLS.md](SKILLS.md) | 추천 공개 Skill 7개의 원본 링크와 자체 Skill 3개의 선택 기준 |
 | [PLUGINS.md](PLUGINS.md) | 추천 공개 Plugin 4개와 설치·사용의 한계 |
 | [WORKFLOW.md](WORKFLOW.md) | Plan → Prompt → Probe → Protect 실전 작업 절차 |
 | [CHECKLIST.md](CHECKLIST.md) | 규정·예외조건·테스트·제출 전 확인표 |
