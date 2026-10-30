@@ -11,9 +11,10 @@
 | 참가자가 구현을 지시하고 도구 선택이 필요 | [TASK_TOOL_MATRIX.md](TASK_TOOL_MATRIX.md) |
 | 실제 실행 오류·테스트 실패 | [.agents/skills/find-and-fix-errors/SKILL.md](.agents/skills/find-and-fix-errors/SKILL.md) |
 | CSV·데이터 결측·중복·집계 오류 | [.agents/skills/check-data-errors/SKILL.md](.agents/skills/check-data-errors/SKILL.md) |
+| 참가자가 주요 판단·담당자 답변·검증 근거 기록 요청 | [.agents/skills/decision-log/SKILL.md](.agents/skills/decision-log/SKILL.md) |
 | 완료 주장·제출 전 검증 | [.agents/skills/check-before-submit/SKILL.md](.agents/skills/check-before-submit/SKILL.md) |
 | 외부 Skill·Plugin이 정말 필요 | [SKILLS.md](SKILLS.md), [PLUGINS.md](PLUGINS.md) |
 
-**작업 규칙:** 필요한 행의 파일만 열고, 서로 겹치는 Skill을 동시에 사용하지 않는다. 외부 Plugin/MCP/별도 Harness는 기본 **0개**다. 자료 링크를 읽었다고 Skill이 자동 설치된 것은 아니다. **선택한 이유를 한 줄로 보고하고**, 검증한 실행 결과와 미검증 항목을 구분한다. 참가자 승인 전 분석 금지, 자료 외부 반출 금지 등은 `START_PROMPT.md`·`SAFETY.md`를 따른다.
+**작업 규칙:** 필요한 행의 파일만 열고, 서로 겹치는 Skill을 동시에 사용하지 않는다. 외부 Plugin/MCP/별도 Harness는 기본 **0개**다. 자료 링크를 읽었다고 Skill이 자동 설치된 것은 아니다. 의사결정 기록은 필요한 경우에만 **실제 과제의 허용된 로컬 작업공간**에 남기며 공개 도구함으로 전송하지 않는다. **선택한 이유를 한 줄로 보고하고**, 검증한 실행 결과와 미검증 항목을 구분한다. 참가자 승인 전 분석 금지, 자료 외부 반출 금지 등은 `START_PROMPT.md`·`SAFETY.md`를 따른다.
 
 여기 연결된 Skill은 공개 작업 지침이며 시험 문제나 답안을 사전에 담아두지 않는다. 별도의 DB 동기화나 Git Push 절차는 포함하지 않는다.
