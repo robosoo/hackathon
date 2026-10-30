@@ -1,33 +1,21 @@
-# AI 과제 해결용 공개 도구함
+# AI 과제 해결용 공개 참고 도구함
 
-참가자가 **먼저 실제 과제를 이해하고 해결 방향을 정한 다음**, Codex가 전체 문제 해결 흐름을 따라 필요한 Skill만 선택해 구현·검증하도록 돕는 비공식 공개 학습 자료입니다. 전체 작업 태도·역할 분담·절차는 [EXAM_WORKFLOW.md](EXAM_WORKFLOW.md)에 정리했습니다.
+이 저장소는 **2026 SK하이닉스 AI 해커톤 2차 예선용 비공식 사전 준비 자료**다. 실제 시험 과제·정답·공식 평가 지침이 아니다.
 
-## 사용
+## 시험 환경에서 사용
 
-시험장 Codex에 **이 저장소의 [START_PROMPT.md](START_PROMPT.md)를 읽으라고 지시**합니다. **실제 시험 과제의 `README.md`와 이 도구함의 `TOOLKIT_GUIDE.md`는 서로 다른 파일입니다.** 실제 과제 지시서를 먼저 확인합니다.
+제공된 Codex에게 `https://github.com/robosoo/hackathon.git`을 **실제 과제 폴더와 구분되는 허용된 위치에 Clone**하도록 지시한다. 과제 파일은 건드리지 않는다. Clone 뒤 [START_PROMPT.md](START_PROMPT.md)를 읽게 하면 [AGENTS.md](AGENTS.md)·[SAFETY.md](SAFETY.md)를 확인하도록 연결돼 있다.
 
-1. Codex가 **실제 과제 README와 제공 자료를 직접 읽음**.
-2. 참가자가 직접 문제를 파악하고 해결 방향을 정할 동안 Codex는 **문제 풀이·코딩을 시작하지 않고 대기**. 다만 이해가 안 되는 용어·자료 설명은 요청받으면 제공.
-3. 참가자가 자신의 문제 이해·풀이 방향을 밝히고 진행을 요청하면 Codex는 **[EXAM_WORKFLOW.md](EXAM_WORKFLOW.md)의 체크포인트를 참고**하되 현재 문제에 필요한 단계만 선택. 필요한 Skill만 읽고 분석·구현·테스트하며 실제 검증 근거를 보고.
-4. 중요한 판단·수동 화면 확인·최종 제출은 참가자가 직접 수행.
+참가자가 실제 과제의 `README.md`를 읽고 문제를 이해한 다음, 자신의 해석과 풀이 방향을 Codex에 전달한다. 이후 [EXAM_WORKFLOW.md](EXAM_WORKFLOW.md)를 참고해 필요한 작업만 수행한다. 작업 메모는 필요할 때 실제 과제 폴더의 `WORKLOG.md` 또는 기존 기록 파일 하나로 관리한다. **참고자료 폴더에는 시험 문제·결과물을 저장하지 않는다.**
 
-## 적은 컨텍스트로 사용하기
+## 파일 구분
 
-| 문서 | 역할 |
-| --- | --- |
-| [START_PROMPT.md](START_PROMPT.md) | **짧은 시작 지침** |
-| [AGENTS.md](AGENTS.md) | **작업별 참고자료 안내판** |
-| [EXAM_WORKFLOW.md](EXAM_WORKFLOW.md) | **참가자 주도 문제 해결 원칙·역할·7단계 흐름·예시 프롬프트** — 참가자가 문제를 이해한 이후 참조 |
-| [SAFETY.md](SAFETY.md) | 공통 시험 안전 제한 |
-| [COFA_EVIDENCE_PLAYBOOK.md](COFA_EVIDENCE_PLAYBOOK.md) | **선택적 참고:** Cofa 인터뷰·자체 교재·공개 GitHub를 교차 검토한 실전 교훈과 근거 |
-| [SKILLS.md](SKILLS.md) / [PLUGINS.md](PLUGINS.md) | 외부 도구가 정말 필요할 때만 |
-| [TASK_TOOL_MATRIX.md](TASK_TOOL_MATRIX.md) | 작업 유형별 도구 판단이 필요할 때만 |
-| [.agents/skills](.agents/skills) | 자체 Skill 5개: 요구사항, 데이터 검증, 디버깅, 결정 기록, 제출 전 점검 |
+- [START_PROMPT.md](START_PROMPT.md): 최초 지시와 문서 읽기 순서
+- [AGENTS.md](AGENTS.md): 자체 Skill 5개의 **유일한 선택 지도**
+- [SAFETY.md](SAFETY.md): 허용 범위·금지행동의 **기준 문서**
+- [EXAM_WORKFLOW.md](EXAM_WORKFLOW.md): 문제 이해·현직자 질문·구현·검증의 상세 원칙
+- [TASK_TOOL_MATRIX.md](TASK_TOOL_MATRIX.md): 과제 유형별 최소 구현·검증 힌트
+- [SKILLS.md](SKILLS.md) · [PLUGINS.md](PLUGINS.md): 추가 지침이 **꼭 필요할 때만** 읽는 참고 목록
+- [COFA_EVIDENCE_PLAYBOOK.md](COFA_EVIDENCE_PLAYBOOK.md): Cofa 공식 자료·인터뷰·공개 사례의 근거와 해석 구분
 
-기본적으로 **START_PROMPT → AGENTS + SAFETY까지만 읽고**, 참가자가 스스로 이해하고 진행을 요청하면 **EXAM_WORKFLOW**를 읽습니다. **필수 요구사항을 만족하는 단순한 구현을 우선하며 과설계를 피합니다.** 이후 세부 Skill은 실제 작업에 해당할 때만 읽습니다. 여러 문서를 한 번에 주입하거나, 공개 Skill·Plugin을 무조건 설치하지 않습니다. **판단 근거 기록용 `decision-log`는 선택 사항**이며, 참가자의 분석 요청 후 필요할 때만 실제 과제의 허용된 로컬 작업공간에 `WORKLOG.md` 한 파일(또는 기존 기록 파일)로 **문제·현재 단계·구현·예외·검증·다음 행동**을 간단히 관리합니다. 공개 저장소에는 시험 자료·기록을 올리지 않습니다. 외부 Plugin/MCP/별도 Harness는 **기본 0개**입니다.
-
-기존 자체 브레인스토밍 Skill은 [Superpowers `brainstorming` 원본](https://github.com/openai/plugins/blob/main/plugins/superpowers/skills/brainstorming/SKILL.md)에서 문제 정의의 기본 접근을 참고한 **별도 경량 지침**이며, 원본 전체 도구가 설치된 것은 아닙니다.
-
-`.gitignore`는 파일을 새로 추적하지 않게 하는 Git 설정일 뿐 AI의 파일 읽기를 막지 않습니다. **공개 시험용 도구함에서는 `AGENTS.md`를 계속 공개·관리**합니다. 시험 자료·응시 결과는 이 저장소에 올리지 않습니다.
-
-**시험 당일 추가 공지·최신 운영팀 메일·실제 과제 README·공식 가이드가 이 도구함보다 우선**이며, 문서나 Skill 사용 자체의 가점·감점은 보장되지 않습니다. 사용한 공개 저장소는 2차 예선 결과 통지 전까지 공개로 유지하고, 시험 자료·코드·결과의 외부 전송과 Git Push는 하지 않습니다.
+**최신 운영팀 공지와 실제 과제 지시가 우선이다.** 공식 가점·감점 기준은 공개되지 않았다. 공개 자료는 허용된 범위에서만 사용하며, 결과물을 외부 자료로 통째 대체하지 않는다.
