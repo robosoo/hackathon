@@ -136,17 +136,9 @@ Codex가 자료를 실제로 읽은 후 다음 구분표를 작성한다. **파�
 
 > 실제 README의 요구사항을 한 줄씩 대조하고, 각 항목에 [구현 파일 / 실행 명령 / 실제 출력·테스트 근거 / PASS·FAIL·미검증]을 표시해 줘. 문제점이 있으면 중요도순으로 보여주고, 확인하지 않은 기능을 완료라고 말하지 마.
 
-## 7. 필요할 때만 쓰는 Skill
+## 7. 필요한 자료만 참고
 
-제작자 인터뷰와 자체 교재·외부 공개 자료에서 추린 추가 사례는 [COFA_EVIDENCE_PLAYBOOK.md](COFA_EVIDENCE_PLAYBOOK.md)에 있다. **선택적 참고 자료이므로 전체를 자동으로 읽지 않는다.**
-
-- 요구사항 해석·미확정 규칙·현직자 질문: [brainstorm-requirements](.agents/skills/brainstorm-requirements/SKILL.md)
-- CSV·Join·결측·중복·집계: [check-data-errors](.agents/skills/check-data-errors/SKILL.md)
-- 테스트 실패·실행 오류: [find-and-fix-errors](.agents/skills/find-and-fix-errors/SKILL.md)
-- 중요 판단·근거 기록: [decision-log](.agents/skills/decision-log/SKILL.md)
-- 완료·제출 전 점검: [check-before-submit](.agents/skills/check-before-submit/SKILL.md)
-
-**전체 흐름은 이 파일**, 세부 수행 절차는 필요한 Skill 하나로 연결한다. **무조건 전부 읽거나 설치하거나 실행하지 않는다.** Git Clone은 파일을 가져오는 작업일 뿐 Skill 자동 활성화가 보장된다는 뜻은 아니다. 외부 Plugin·MCP·별도 하네스는 기본 0개이며, 설치·연결·외부 통신을 자동 진행하지 않는다. 상세 제한은 [SAFETY.md](SAFETY.md)를 따른다.
+Skill 선택은 [AGENTS.md](AGENTS.md)의 상황별 표를 기준으로 하고, 정확한 사용법이 필요할 때만 해당 Skill 파일을 읽는다. 공식 자료·제작자 인터뷰에서 얻은 근거는 [COFA_EVIDENCE_PLAYBOOK.md](COFA_EVIDENCE_PLAYBOOK.md)에 있다. **실제 요구에 근거 없는 기능·추가 도구를 만들지 않는다.**
 
 ## 8. Codex의 협업 응답 원칙
 
@@ -161,13 +153,8 @@ Codex가 자료를 실제로 읽은 후 다음 구분표를 작성한다. **파�
 
 매번 장황한 설명·불필요한 확인·반복적인 브레인스토밍을 하지 않는다. 참가자가 "왜?"라고 물으면 구체적인 증거와 예시로 설명한다.
 
-## 9. 시작 방법과 우선순위
+## 9. 적용 순서와 우선순위
 
-1. 참가자가 제공된 환경에 이 **공개 도구함**을 허용된 방법으로 가져온다.
-2. Codex는 [START_PROMPT.md](START_PROMPT.md), [AGENTS.md](AGENTS.md), [SAFETY.md](SAFETY.md)를 읽고, 실제 과제 파일의 **열람 여부만** 보고한다.
-3. 참가자가 실제 과제 README를 직접 읽고 자신의 이해·풀이 방향을 설명한다.
-4. 그때 Codex가 **이 파일의 전체 흐름을 참고**하고 현재 단계의 Skill을 필요한 경우만 읽는다.
-5. **시험 당일 공지·최신 운영팀 메일·실제 과제 README·공식 가이드**가 이 매뉴얼과 Skill보다 우선한다. 최신 메일이 기존 가이드와 충돌할 때는 해당 메일에 명시된 우선순위를 따른다.
-6. **시험 문제·자료·로그·코드·결과를 공개 저장소로 보내거나 Git Push하지 않는다.** 공개 저장소는 다운로드만 하고 결과 통지 전까지 공개 상태를 유지한다. 외부 브라우저 직접 접근, 외부 AI, Browser 자동 조작, 시험 제한 우회도 하지 않는다. 로컬 서비스 미리보기는 제공된 Browser에서 참가자가 직접 확인한다.
+시작과 자료 열람은 [START_PROMPT.md](START_PROMPT.md), 금지행동과 공개 자료 활용 범위는 [SAFETY.md](SAFETY.md)가 기준이다. **시험 당일 최신 공지와 실제 과제 지시가 우선**이며, 최종 업무 판단·검증 승인·제출은 참가자가 수행한다.
 
-**목적 → 근거 → 예외 → 검증**을 반복하며, 중요한 판단은 사람이 수행하고 실행과 검증은 Codex의 도움을 받는다.
+**목적 → 근거 → 예외 → 검증**을 반복한다.
