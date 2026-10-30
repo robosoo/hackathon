@@ -2,13 +2,14 @@
 
 **우선순위: 참가자가 시험 과제 README를 직접 읽고 이해하기 전에는 어떤 Skill도 실행하지 않습니다.** 참가자가 이해·진행 의사를 밝힌 뒤에만 필요한 Skill을 선택합니다.
 
-이 저장소의 **자체 Skill 4개**는 각기 다른 일을 담당합니다. `SKILL.md`를 실제 읽어야 작동 방식을 참고할 수 있고, 시험 Codex의 자동 탐색 기능은 보장되지 않습니다.
+이 저장소의 **자체 Skill 5개**는 각기 다른 일을 담당합니다. `SKILL.md`를 실제 읽어야 작동 방식을 참고할 수 있고, 시험 Codex의 자동 탐색 기능은 보장되지 않습니다.
 
 | 상황 | 실제로 저장한 Skill | 담당 |
 | --- | --- | --- |
 | **참가자가 먼저 읽고 요청한 뒤** 요구를 해석하거나 설계 선택이 필요할 때 | [`brainstorm-requirements`](.agents/skills/brainstorm-requirements/SKILL.md) | **목표·업무 규칙·대안·성공 조건**을 정리 |
 | 오류·테스트 실패가 발생했을 때 | [`find-and-fix-errors`](.agents/skills/find-and-fix-errors/SKILL.md) | 실패 재현 → 원인 확인 → 최소 수정 |
-| CSV·표·집계가 있을 때 | [`check-data-errors`](.agents/skills/check-data-errors/SKILL.md) | 중복·결측·형식·단위·경계값 검증 |
+| CSV·표·집계가 있을 때 | [`check-data-errors`](.agents/skills/check-data-errors/SKILL.md) | 중복·결측·형식·단위·경계값·파일 간 연결/중복 집계 검증 |
+| 참가자가 주요 업무 선택의 이유·답변 출처·검증 근거를 남기려 할 때 | [`decision-log`](.agents/skills/decision-log/SKILL.md) | 실제 과제 **로컬 작업공간**의 결정 기록을 필요한 때만 갱신 |
 | 완료를 말하거나 제출물을 확인할 때 | [`check-before-submit`](.agents/skills/check-before-submit/SKILL.md) | 실제 출력·테스트 근거로 PASS/FAIL/미검증 구분 |
 
 ## Superpowers와 OpenAI의 공개 지침 활용
@@ -21,5 +22,7 @@
 - [`react-best-practices`](https://github.com/openai/plugins/blob/main/plugins/build-web-apps/skills/react-best-practices/SKILL.md): 실제 구현이 React/Next.js일 때만.
 
 **중복 제외:** Superpowers `systematic-debugging` ↔ 자체 `find-and-fix-errors`; `verification-before-completion` ↔ `check-before-submit`; Data Analytics `analyze-data-quality` ↔ `check-data-errors`. 기능이 겹치면 둘을 동시에 가져오지 않습니다.
+
+**의사결정 기록 참고:** 공개된 [ColdTbrew/cofa-skills의 decision-log](https://github.com/ColdTbrew/cofa-skills/blob/main/skills/decision-log/SKILL.md)에서 '판단·이유·근거·결과'를 남기는 취지를 참고하여, 본 저장소에는 별도 간결한 지침을 작성했습니다. 원본 Skill·설치 스크립트를 복사하거나 실행하지 않습니다.
 
 **주의:** 위 외부 링크는 원본 참고용입니다. Plugin이나 외부 Skill을 모두 설치하라는 권고가 아니며, 원문에 포함된 자동 브라우저 조작·외부 AI·Git Push 등의 금지 동작은 실행하지 않습니다.
