@@ -1,28 +1,15 @@
-# Skill 지도 — 겹치지 않게 사용하기
+# 외부 공개 Skill 참고 목록
 
-**우선순위: 참가자가 시험 과제 README를 직접 읽고 이해하기 전에는 어떤 Skill도 실행하지 않습니다.** 참가자가 이해·진행 의사를 밝힌 뒤 [EXAM_WORKFLOW.md](EXAM_WORKFLOW.md)의 전체 문제 해결 순서를 참고하고, 해당 단계에 필요한 Skill만 선택합니다. 전체 흐름 자체를 자잘한 Skill로 나누어 모두 실행할 필요는 없습니다.
+자체 Skill 5개의 사용 시점은 [AGENTS.md](AGENTS.md)에 있다. 이 문서는 **자체 Skill만으로 부족하고 실제 과제에 필요한 경우**에만 읽는다. 아래 링크는 참고 출처이며, 시험 Codex에 설치·활성화된 도구라는 뜻이 아니다.
 
-이 저장소의 **자체 Skill 5개**는 각기 다른 일을 담당합니다. 문제 규모에 비해 거창한 설계·설치·워크플로우를 만들지 않고, 단순한 기본 Codex 작업으로 충분하면 Skill 없이 진행합니다. `SKILL.md`를 실제 읽어야 작동 방식을 참고할 수 있고, 시험 Codex의 자동 탐색 기능은 보장되지 않습니다.
+| 필요한 경우 | 공개 참고 Skill |
+| --- | --- |
+| 복잡한 작업을 작은 단계로 나눌 필요 | [Superpowers writing-plans](https://github.com/openai/plugins/blob/main/plugins/superpowers/skills/writing-plans/SKILL.md) |
+| 독립 재현 테스트 설계 | [Superpowers test-driven-development](https://github.com/openai/plugins/blob/main/plugins/superpowers/skills/test-driven-development/SKILL.md) |
+| 데이터 지표·결론 검산 | [Data Analytics validate-data](https://github.com/openai/plugins/blob/main/plugins/data-analytics/skills/validate-data/SKILL.md) |
+| PDF가 실제 입출력 | [OpenAI pdf](https://github.com/openai/skills/blob/main/skills/.curated/pdf/SKILL.md) |
+| 실제 구현이 React/Next.js | [react-best-practices](https://github.com/openai/plugins/blob/main/plugins/build-web-apps/skills/react-best-practices/SKILL.md) |
 
-| 상황 | 실제로 저장한 Skill | 담당 |
-| --- | --- | --- |
-| **참가자가 먼저 읽고 요청한 뒤** 요구를 해석하거나 설계 선택이 필요할 때 | [`brainstorm-requirements`](.agents/skills/brainstorm-requirements/SKILL.md) | **목표·업무 규칙·대안·성공 조건**을 정리 |
-| 오류·테스트 실패가 발생했을 때 | [`find-and-fix-errors`](.agents/skills/find-and-fix-errors/SKILL.md) | 실패 재현 → 원인 확인 → 최소 수정 |
-| CSV·표·집계가 있을 때 | [`check-data-errors`](.agents/skills/check-data-errors/SKILL.md) | 중복·결측·형식·단위·경계값·파일 간 연결/중복 집계 검증 |
-| 참가자가 주요 업무 선택의 이유·답변 출처·검증 근거를 남기려 할 때 | [`decision-log`](.agents/skills/decision-log/SKILL.md) | 실제 과제 **로컬 작업공간**의 결정 기록을 필요한 때만 갱신 |
-| 완료를 말하거나 제출물을 확인할 때 | [`check-before-submit`](.agents/skills/check-before-submit/SKILL.md) | 실제 출력·테스트 근거로 PASS/FAIL/미검증 구분 |
+**중복 적용하지 않기:** 자체 `brainstorm-requirements`는 [Superpowers brainstorming](https://github.com/openai/plugins/blob/main/plugins/superpowers/skills/brainstorming/SKILL.md)의 접근법을 참고한 독립 경량 지침이다. 자체 `find-and-fix-errors`는 외부 systematic-debugging, `check-before-submit`은 verification-before-completion, `check-data-errors`는 analyze-data-quality와 역할이 겹친다.
 
-## Superpowers와 OpenAI의 공개 지침 활용
-
-- **[Superpowers `brainstorming`](https://github.com/openai/plugins/blob/main/plugins/superpowers/skills/brainstorming/SKILL.md)**: 유용한 문제 정의 방식. 원본의 **모든 작업 전 강제 승인**, Git 커밋, Browser 시각 보조 등은 이번 실전 기본 흐름에서 실행하지 않습니다. [자체 경량 변형](.agents/skills/brainstorm-requirements/SKILL.md)은 그중 **맥락 파악·핵심 질문·대안·성공 기준**만 반영했으며 **공식 원본 설치본이 아닙니다**.
-- [Superpowers `writing-plans`](https://github.com/openai/plugins/blob/main/plugins/superpowers/skills/writing-plans/SKILL.md): 복잡한 요구를 작업 단위로 나눌 때만. 간단한 작업은 Codex 기본 계획으로 충분합니다.
-- [Superpowers `test-driven-development`](https://github.com/openai/plugins/blob/main/plugins/superpowers/skills/test-driven-development/SKILL.md): 과제에 로컬 재현 테스트를 만들 필요가 있을 때만.
-- [Data Analytics `validate-data`](https://github.com/openai/plugins/blob/main/plugins/data-analytics/skills/validate-data/SKILL.md): **데이터 자체 품질**이 아닌 계산·지표·결론 검산이 필요한 경우.
-- [OpenAI `pdf`](https://github.com/openai/skills/blob/main/skills/.curated/pdf/SKILL.md): PDF가 실제 입력·제출물일 때만.
-- [`react-best-practices`](https://github.com/openai/plugins/blob/main/plugins/build-web-apps/skills/react-best-practices/SKILL.md): 실제 구현이 React/Next.js일 때만.
-
-**중복 제외:** Superpowers `systematic-debugging` ↔ 자체 `find-and-fix-errors`; `verification-before-completion` ↔ `check-before-submit`; Data Analytics `analyze-data-quality` ↔ `check-data-errors`. 기능이 겹치면 둘을 동시에 가져오지 않습니다.
-
-**의사결정 기록 참고:** 공개된 [ColdTbrew/cofa-skills의 decision-log](https://github.com/ColdTbrew/cofa-skills/blob/main/skills/decision-log/SKILL.md)에서 '판단·이유·근거·결과'를 남기는 취지를 참고하여, 본 저장소에는 별도 간결한 지침을 작성했습니다. 원본 Skill·설치 스크립트를 복사하거나 실행하지 않습니다.
-
-**주의:** 위 외부 링크는 원본 참고용입니다. Plugin이나 외부 Skill을 모두 설치하라는 권고가 아니며, **Codex가 외부 플러그인·MCP를 자동 설치·연결하거나 원문의 실행 스크립트를 무검토 실행하지 않습니다.** 실제 과제에 필요한지, 외부 데이터 전송이 없는지, 공식 허용 범위인지 참가자가 확인한 경우에만 제한적으로 고려합니다. 원문에 포함된 외부 브라우저 직접 접근·자동 조작·외부 AI·Git Push 등의 금지 동작은 실행하지 않습니다.
+`decision-log`는 [공개 Cofa Skill 예시](https://github.com/ColdTbrew/cofa-skills/blob/main/skills/decision-log/SKILL.md)의 기록 취지를 참고하되 별도로 작성했다. 원본 지침 전체를 자동 실행하지 않는다. 설치·네트워크·자동 조작 제한은 [SAFETY.md](SAFETY.md)에 따른다.
