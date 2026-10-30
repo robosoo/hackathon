@@ -7,8 +7,8 @@
 시험장 Codex에 **이 저장소의 [START_PROMPT.md](START_PROMPT.md)를 읽으라고 지시**합니다. **실제 시험 과제의 `README.md`와 이 도구함의 `TOOLKIT_GUIDE.md`는 서로 다른 파일입니다.** 실제 과제 지시서를 먼저 확인합니다.
 
 1. Codex가 **실제 과제 README와 제공 자료를 직접 읽음**.
-2. 참가자가 직접 문제를 파악하고 해결 방향을 정할 동안 Codex는 **문제 풀이를 시작하지 않고 대기**.
-3. 참가자가 자신의 문제 이해·풀이 방향을 밝히고 진행을 요청하면 Codex는 **[EXAM_WORKFLOW.md](EXAM_WORKFLOW.md)를 읽어 Understand → Analyze → Clarify → Plan → Build → Verify → Deliver 흐름을 적용**하고, 필요한 Skill만 선택해 분석·구현·테스트하며 선택 이유와 확인된 증거를 보고.
+2. 참가자가 직접 문제를 파악하고 해결 방향을 정할 동안 Codex는 **문제 풀이·코딩을 시작하지 않고 대기**. 다만 이해가 안 되는 용어·자료 설명은 요청받으면 제공.
+3. 참가자가 자신의 문제 이해·풀이 방향을 밝히고 진행을 요청하면 Codex는 **[EXAM_WORKFLOW.md](EXAM_WORKFLOW.md)의 체크포인트를 참고**하되 현재 문제에 필요한 단계만 선택. 필요한 Skill만 읽고 분석·구현·테스트하며 실제 검증 근거를 보고.
 4. 중요한 판단·수동 화면 확인·최종 제출은 참가자가 직접 수행.
 
 ## 적은 컨텍스트로 사용하기
@@ -24,7 +24,7 @@
 | [TASK_TOOL_MATRIX.md](TASK_TOOL_MATRIX.md) | 작업 유형별 도구 판단이 필요할 때만 |
 | [.agents/skills](.agents/skills) | 자체 Skill 5개: 요구사항, 데이터 검증, 디버깅, 결정 기록, 제출 전 점검 |
 
-기본적으로 **START_PROMPT → AGENTS + SAFETY까지만 읽고**, 참가자가 스스로 이해하고 진행을 요청하면 **EXAM_WORKFLOW**를 읽습니다. **필수 요구사항을 만족하는 단순한 구현을 우선하며 과설계를 피합니다.** 이후 세부 Skill은 실제 작업에 해당할 때만 읽습니다. 여러 문서를 한 번에 주입하거나, 공개 Skill·Plugin을 무조건 설치하지 않습니다. **판단 근거 기록용 `decision-log`는 선택 사항**이며, 참가자의 분석 요청 후 필요할 때만 실제 과제의 허용된 로컬 작업공간에 `WORKLOG.md` 한 파일(또는 기존 기록 파일)을 간단히 갱신합니다. 공개 저장소에는 시험 자료·기록을 올리지 않습니다. 외부 Plugin/MCP/별도 Harness는 **기본 0개**입니다.
+기본적으로 **START_PROMPT → AGENTS + SAFETY까지만 읽고**, 참가자가 스스로 이해하고 진행을 요청하면 **EXAM_WORKFLOW**를 읽습니다. **필수 요구사항을 만족하는 단순한 구현을 우선하며 과설계를 피합니다.** 이후 세부 Skill은 실제 작업에 해당할 때만 읽습니다. 여러 문서를 한 번에 주입하거나, 공개 Skill·Plugin을 무조건 설치하지 않습니다. **판단 근거 기록용 `decision-log`는 선택 사항**이며, 참가자의 분석 요청 후 필요할 때만 실제 과제의 허용된 로컬 작업공간에 `WORKLOG.md` 한 파일(또는 기존 기록 파일)로 **문제·현재 단계·구현·예외·검증·다음 행동**을 간단히 관리합니다. 공개 저장소에는 시험 자료·기록을 올리지 않습니다. 외부 Plugin/MCP/별도 Harness는 **기본 0개**입니다.
 
 기존 자체 브레인스토밍 Skill은 [Superpowers `brainstorming` 원본](https://github.com/openai/plugins/blob/main/plugins/superpowers/skills/brainstorming/SKILL.md)에서 문제 정의의 기본 접근을 참고한 **별도 경량 지침**이며, 원본 전체 도구가 설치된 것은 아닙니다.
 
