@@ -19,6 +19,7 @@
 | [AGENTS.md](AGENTS.md) | **작업별 참고자료 안내판** |
 | [EXAM_WORKFLOW.md](EXAM_WORKFLOW.md) | **참가자 주도 문제 해결 원칙·역할·7단계 흐름·예시 프롬프트** — 참가자가 문제를 이해한 이후 참조 |
 | [SAFETY.md](SAFETY.md) | 공통 시험 안전 제한 |
+| [COFA_EVIDENCE_PLAYBOOK.md](COFA_EVIDENCE_PLAYBOOK.md) | **선택적 참고:** Cofa 인터뷰·자체 교재·공개 GitHub를 교차 검토한 실전 교훈과 근거 |
 | [SKILLS.md](SKILLS.md) / [PLUGINS.md](PLUGINS.md) | 외부 도구가 정말 필요할 때만 |
 | [TASK_TOOL_MATRIX.md](TASK_TOOL_MATRIX.md) | 작업 유형별 도구 판단이 필요할 때만 |
 | [.agents/skills](.agents/skills) | 자체 Skill 5개: 요구사항, 데이터 검증, 디버깅, 결정 기록, 제출 전 점검 |
