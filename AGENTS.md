@@ -1,7 +1,9 @@
-# Codex entry point
+# Codex 작업 지침
 
-Read [SAFETY.md](SAFETY.md) and [.agents/skills/human-decision-review/SKILL.md](.agents/skills/human-decision-review/SKILL.md).
+`START_PROMPT.md`를 읽으라는 요청을 받으면 현재 폴더의 `SAFETY.md`와 `.agents/skills/human-decision-review/SKILL.md`를 확인한 뒤, **실제 문제 폴더를 찾아 바로 작업을 시작한다.** 추가 시작 지시를 기다리지 않는다.
 
-The current task README and authorized workspace instructions take priority. The repository is a reusable instruction toolkit, not the task.
+이 저장소는 작업 방법을 담은 Skill 폴더다. 실제 문제의 README·데이터·코드·제출 조건을 우선하며, 해당 파일의 내용을 이 저장소로 옮기지 않는다.
 
-After the user's explicit start instruction, work inside the actual task folder, implement required functionality, run tests, and report observed results. Do not publish or upload task materials.
+필수 기능부터 구현하고 실제로 실행해 확인한다. 중요한 업무 정책만 사용자에게 물어보고 나머지 구현·수정·Test는 스스로 진행한다. 사용자가 업무 담당자와 나눈 대화를 추가하면 변경된 규칙이 실제 코드와 Test에 반영되었는지 확인한다.
+
+Test를 실행하지 않았거나 실행 결과를 확인할 수 없다면 성공했다고 보고하지 않는다. 허가되지 않은 외부 전송·배포·Git Push를 하지 않는다.

@@ -1,15 +1,25 @@
 # Human Decision Review
 
-A small Codex Skill for solving unfamiliar coding and data tasks.
+처음 보는 코딩·데이터 과제를 Codex로 해결할 때 사용하는 Skill이다. 요구사항을 확인한 뒤 구현과 테스트를 반복하고, 중요한 업무 판단은 사용자가 직접 결정하는 방식으로 진행한다.
 
-## Use
+## 사용 방법
 
-Run this command only when repository downloads are allowed:
+Git Clone은 사용자가 직접 완료한다. `hackathon`은 문제풀이 지침을 보관하는 폴더이며, 실제 문제 파일과 구분해서 사용한다.
 
-```bash
-git clone --depth 1 https://github.com/robosoo/hackathon.git
-```
+Clone이 끝나면 Codex에 다음과 같이 지시한다.
 
-Keep `hackathon/` separate from the actual task directory. Ask Codex to read `hackathon/START_PROMPT.md`, then explicitly tell it when to begin the task.
+> 복제한 `hackathon/START_PROMPT.md`를 읽고 실행해.
 
-The Skill helps with reading requirements, asking essential questions, building working functionality, testing, fixing errors, and explaining verified results. It contains no task-specific solution or dataset.
+Codex는 `START_PROMPT.md`를 읽은 즉시 실제 문제 폴더의 README와 코드를 확인하고 작업을 시작한다. 별도의 시작 명령은 필요 없다. 경로는 실제 작업 폴더 위치에 맞춰 지정한다.
+
+## 작업 원칙
+
+1. 실제 README와 제공 파일을 먼저 확인하고 필수 기능·제약조건·완료 기준을 파악한다.
+2. 결과를 바꾸는 업무 정책만 사용자에게 질문한다. 일반적인 기술적 결정은 Codex가 진행한다.
+3. 가장 작은 정상 동작부터 구현하고, 기능별로 Test → 수정 → 재검증을 반복한다.
+4. 필요할 때만 독립 작업을 여러 Terminal에서 실행하고, 변경 사항을 합쳐 다시 확인한다.
+5. 중요한 알고리즘 선택, 데이터 흐름, 실제 Test 결과, 남은 문제를 간결하게 설명한다.
+
+작업 방법은 [SKILL.md](.agents/skills/human-decision-review/SKILL.md), 허용 범위와 주의사항은 [SAFETY.md](SAFETY.md)에 정리되어 있다.
+
+현재 작업의 README, 제출 조건, 도구 사용 규칙이 이 저장소의 지침보다 우선한다.

@@ -1,15 +1,59 @@
-# Start prompt
+# 문제풀이 시작 지침
 
-## First: prepare
+Git Clone은 내가 직접 완료했다. 추가 Clone이나 설치는 하지 않는다.
 
-Read `hackathon/SAFETY.md` and `hackathon/.agents/skills/human-decision-review/SKILL.md`. Confirm the actual task directory, task README, and accessible tools. Keep the toolkit and task separate. Do not start implementation until I tell you to begin.
+이 파일이 있는 폴더의 `SAFETY.md`와 `.agents/skills/human-decision-review/SKILL.md`를 읽어라. 이 폴더는 문제풀이용 Skill이며 실제 문제 폴더가 아니다.
 
-## When I say begin
+**지침을 확인하는 즉시 실제 문제를 분석하고 구현을 시작한다. 별도의 시작 지시를 기다리지 않는다.**
 
-Read the actual task instructions, code, data, and `conversation.md` if present. Identify required outputs, hard constraints, missing business policies, and checks for correctness. Implement the smallest working end-to-end function first, execute its test, and repeat build → test → fix for the remaining required functions.
+## 1. 실제 문제 확인
 
-Ask me only for important unresolved business decisions. Make ordinary reversible technical choices yourself. When I update `conversation.md`, read the new Q&A, verify it against the task requirements, update affected code and tests, and report conflicts.
+- 현재 Workspace에서 제공된 실제 문제 폴더와 README를 찾는다. 작업 대상이 여러 개라면 파일 내용과 사용자가 지정한 위치를 근거로 구분한다.
+- README, 기존 코드, 데이터 형식, 실행 방법, 제출 조건, 사용 가능한 도구를 확인한다.
+- 필수 기능, 반드시 지켜야 하는 제약, 빠진 업무 정책, 완료를 확인할 Test를 구분한다.
+- 중요한 요구사항은 어느 파일에 적혀 있는지 확인한다. 실제 문서에 없는 규칙을 임의로 확정하지 않는다.
 
-Use extra local terminals only for independent work when allowed (such as server, logs, and tests). Avoid overlapping edits and recheck integrated changes. Do not assume multiple terminals mean multiple AI agents.
+## 2. 질문과 우선순위
 
-At each meaningful checkpoint, briefly explain what works, why the method was chosen, actual test evidence, and what is unfinished. Respect the required submission format and tool restrictions.
+- 결과값·승인 여부·데이터 처리·운영 안전에 영향을 주는 미확정 정책만 질문한다.
+- 이미 README에 있는 내용이나 코드로 직접 확인할 수 있는 사항은 다시 묻지 않는다.
+- 질문에는 필요한 이유와 가능한 판단 차이를 간결하게 덧붙인다.
+- 답변을 기다리는 동안 확정된 요구사항의 구현과 Test는 계속한다.
+- 기술적 선택은 가장 단순하면서 요구사항을 충족하는 방법을 우선한다. 별도의 승인이 필요한 변경과 되돌릴 수 있는 구현 선택을 구분한다.
+
+## 3. 구현과 Test
+
+- 가능한 한 빨리 실제 Input → 검증 → 처리 → 필요한 저장 → Output까지 연결되는 최소 동작을 만든다.
+- 첫 기능이 동작하면 즉시 실행해 확인하고, 나머지 필수 기능도 작은 단위로 구현·Test·수정을 반복한다.
+- 데이터 집계, 규칙 판정, 최적화, 상태 관리 등은 실제 문제에 필요한 방법만 선택한다.
+- 필수 제약을 먼저 충족한 다음, 요구될 때 성능·비용·편의성을 개선한다. 최적해를 보장하지 않는 알고리즘을 최적해라고 설명하지 않는다.
+- 경계값, 누락·중복·잘못된 입력, 반복 요청, 상태 변경, 저장 실패, 동시 실행은 실제 기능과 관련된 경우에만 검사한다.
+- 계산 결과는 가능한 경우 손으로 검산할 수 있는 작은 입력이나 별도 기준값과 비교한다.
+- 오류가 발생하면 같은 입력으로 재현하고 원인을 수정한 뒤 다시 실행한다. 기존에 정상 동작하던 기능도 필요한 범위에서 재검증한다.
+
+## 4. 업무 담당자 답변 반영
+
+- 실제 문제 폴더에 `conversation.md`가 있으면 내용을 확인한다.
+- 내가 새 질문·답변을 추가하면 새로 확인된 정책과 여전히 애매한 내용을 구분한다.
+- 확정된 답변이 영향을 주는 기능, 저장 결과, Test를 찾아 필요한 부분을 수정하고 재검증한다.
+- 질문을 많이 만드는 것보다 답변을 실제 결과물에 정확히 반영하는 데 집중한다.
+
+## 5. Terminal과 작업 관리
+
+- 여러 Terminal은 허용된 환경에서 독립적인 작업에만 사용한다. 예를 들어 Server 실행, Log 확인, Test 실행을 병렬로 진행할 수 있다.
+- Terminal을 여러 개 열었다고 AI Agent가 여러 개 생기는 것은 아니다. 추가 AI Session 사용 여부도 실제 허용 범위를 따른다.
+- 같은 파일을 동시에 수정하거나 검증 중인 코드를 덮어쓰지 않는다. 변경 내용을 통합한 뒤 관련 Test를 다시 실행한다.
+- 시간이 부족할 때는 선택 기능보다 필수 기능의 동작과 검증을 우선한다.
+
+## 6. 진행 상황과 완료 확인
+
+큰 기능을 마칠 때마다 아래 내용을 짧게 알려준다.
+
+1. 무엇을 구현했고 어떤 파일이 바뀌었는가?
+2. 중요한 구현 방법을 선택한 이유와 확인된 한계는 무엇인가?
+3. 어떤 Test를 실제로 실행했고 결과가 어땠는가?
+4. 아직 미구현이거나 확인이 필요한 내용은 무엇인가?
+
+완료 전에는 실제 README의 필수 요구사항과 제출 조건을 다시 대조한다. Test 결과는 `PASS`, `FAIL`, `NOT-RUN`, `BLOCKED`로 구분하고, 실행하지 않은 Test를 통과했다고 보고하지 않는다.
+
+외부 전송이나 Git Push는 현재 환경에서 명시적으로 허용되지 않았다면 실행하지 않는다.

@@ -1,4 +1,4 @@
 interface:
   display_name: "Human Decision Review"
-  short_description: "Requirements, implementation, tests, and review"
-  default_prompt: "Read the actual task instructions, clarify important missing business rules, implement a minimal working solution, run real tests, and report observed evidence."
+  short_description: "요구사항 확인, 구현, Test, 결과 검증"
+  default_prompt: "실제 문제의 README와 자료를 확인하고, 필수 기능부터 구현해 Test를 실행해 줘. 중요한 업무 정책만 질문하고 결과와 남은 문제를 간결하게 설명해 줘."
