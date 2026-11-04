@@ -1,0 +1,4 @@
+interface:
+  display_name: "Human Decision Review"
+  short_description: "Requirements, implementation, tests, and review"
+  default_prompt: "Read the actual task instructions, clarify important missing business rules, implement a minimal working solution, run real tests, and report observed evidence."
