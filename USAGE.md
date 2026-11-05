@@ -6,7 +6,7 @@ Git Clone은 사용자가 허용된 환경에서 직접 수행한다. **`hackath
 
 Clone 후 Codex에 다음과 같이 지시하면 된다.
 
-> 복제한 hackathon/START_PROMPT.md를 읽고, 실제 문제 폴더의 README와 자료를 확인한 다음 작업을 시작해.
+> hackathon/START_PROMPT.md를 읽어.
 
 Codex가 이 지침을 읽으면 별도의 시작 허가 없이 허용된 범위의 분석과 구현을 진행한다. 경로는 실제 환경에 맞게 지정한다. **Clone만으로 Skill이 자동 활성화되지는 않는다.**
 
